@@ -22,7 +22,8 @@ async function SubmitToken() {
         response = await fetch("https://discordapp.com/api/v8/users/@me", {
             method: "GET",
             headers: {
-                Authorization: token
+                Authorization: token,
+                Access-Control-Allow-Origin: *
             },
         });
         response = await response.json();
