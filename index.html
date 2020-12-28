@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/extra.css" />
+    <meta name="author" content="DevTroxep">
+    <title>Check Discord Token</title>
+    <style>
+        body {
+          background-image: url('assets/background.gif');
+        }
+    </style>
+</header>
+
+<body>
+    <div class="general">
+        <label>
+            <input class="label" type="text" placeholder=" ">
+            <p>Discord Token</p>
+        </label>
+        <button class="button" onclick="SubmitToken()">Submit</button>
+        <br />
+        <div class="image">
+            <img id="profile" />
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item" id="tag">Discriminator:</li>
+            <li class="list-group-item" id="email">Email:</li>
+            <li class="list-group-item" id="verified">Verified:</li>
+            <li class="list-group-item" id="id">User ID:</li>
+            <li class="list-group-item" id="locale">Locale:</li>
+            <li class="list-group-item" id="phone">Phone</li>
+        </ul>
+        <div class="centered-error-div">
+            <div class="alert alert-danger text-center" id="alert-doe">Invalid Token</div>
+        </div>
+        <footer>
+            <b>
+                <p>Copyright &copy; Levi Batkin Development</p>
+            </b>
+        </footer>
+        <div class="info">
+            <p><a href="https://discord.gg/EBHJQwbm6A" target="_blank">Discord</a></p>
+            <p><a href="https://www.youtube.com/BlitzTutorials" target="_blank">YouTube</a></p>
+        </div>
+        <audio id="myAudio" hidden src="assets/music.mp3" type="audio/mpeg">
+        </audio>
+        <button class="button" onclick="togglePlay()">♫</button>
+</body>
+<script src="assets/main.js"></script>
+    <script> 
+        var myAudio = document.getElementById("myAudio");
+        var isPlaying = false;
+
+        function togglePlay() {
+        if (isPlaying) {
+            myAudio.pause()
+        } else {
+            myAudio.play();
+        }
+        };
+        myAudio.onplaying = function() {
+        isPlaying = true;
+        };
+        myAudio.onpause = function() {
+        isPlaying = false;
+        };
+    </script>
+</html>
