@@ -76,8 +76,7 @@ async function SubmitToken() {
             method: "GET",
             mode: 'no-cors',
             headers: {
-                Authorization: token,
-                Access-Control-Allow-Origin: https://discordapp.com
+                Authorization: token
             },
         });
         response = await response.json();
