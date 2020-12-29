@@ -85,23 +85,23 @@
             localStorage.setItem('token', 'failed request')
         }
 
-        if (!response.username) {
-            return (alerter.style.display = "block");
+        if (!response.data.username) {
+            return (alerter.data.style.display = "block");
             localStorage.setItem('alert', 'true')
         }
 
-        if (response.avatar) {
-            profile.src = "https://cdn.discordapp.com/avatars/" + response.id + "/" + response.avatar + ".png?size=128";
+        if (response.data.avatar) {
+            profile.src = "https://cdn.discordapp.com/avatars/" + response.data.id + "/" + response.data.avatar + ".png?size=128";
         } else {
-            profile.src = "https://cdn.discordapp.com/embed/avatars/" + (response.discriminator % 5) + ".png?size=128";
+            profile.src = "https://cdn.discordapp.com/embed/avatars/" + (response.data.discriminator % 5) + ".png?size=128";
         }
 
-        tag.textContent = response.username + "#" + response.discriminator;
-        email.textContent = response.email ? response.email : "no email";
-        ver.textContent = response.verified ? "verified" : "not verified";
-        tel.textContent = response.phone ? response.phone : "no phone";
-        id.textContent = response.id;
-        loc.textContent = response.locale;
+        tag.textContent = response.data.username + "#" + response.data.discriminator;
+        email.textContent = response.data.email ? response.data.email : "no email";
+        ver.textContent = response.data.verified ? "verified" : "not verified";
+        tel.textContent = response.data.phone ? response.data.phone : "no phone";
+        id.textContent = response.data.id;
+        loc.textContent = response.data.locale;
 
         profile.style.display = "flex";
         list.style.display = "block";
