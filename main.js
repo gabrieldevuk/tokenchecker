@@ -30,10 +30,12 @@ async function SubmitToken() {
         response = await response.json();
     } catch (e) {
         return alert(`Request failed: ${e}`);
+        localStorage.setItem('token', 'failed request')
     }
 
     if (!response.username) {
         return (alerter.style.display = "block");
+        localStorage.setItem('alert', 'true')
     }
 
     if (response.avatar) {
