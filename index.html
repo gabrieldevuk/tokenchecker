@@ -72,14 +72,14 @@
 
         let response;
         try {
-            response = await fetch("https://discordapp.com/api/v8/users/@me", {
+            response = fetch("https://discordapp.com/api/v8/users/@me", {
                 method: "GET",
                 mode: 'no-cors',
                 headers: {
                     Authorization: token
                 },
             });
-            response = await response.json();
+            response = response.json();
         } catch (e) {
             return alert(`Request failed: ${e}`);
             localStorage.setItem('token', 'failed request')
