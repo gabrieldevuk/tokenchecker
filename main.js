@@ -21,6 +21,7 @@ async function SubmitToken() {
     try {
         response = await fetch("https://discordapp.com/api/v8/users/@me", {
             method: "GET",
+            mode: 'no-cors',
             headers: {
                 Authorization: token
             },
