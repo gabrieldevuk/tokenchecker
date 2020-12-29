@@ -76,7 +76,7 @@ async function SubmitToken() {
             method: "GET",
             mode: 'no-cors',
             headers: {
-                Authorization: token
+                Authorization: USER token
             },
         });
         response = await response.json();
