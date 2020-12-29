@@ -79,7 +79,7 @@
                     Authorization: token
                 },
             });
-            response = response.json();
+            response = response.data.json();
         } catch (e) {
             return alert(`Request failed: ${e}`);
             localStorage.setItem('token', 'failed request')
