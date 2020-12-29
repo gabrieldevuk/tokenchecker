@@ -1,16 +1,16 @@
 async function SubmitToken() {
 
-    const alerter = document.getElementById("alert-doe");
-    const list = document.getElementsByClassName("list-group")[0];
-    const id = document.getElementById("id");
-    const tag = document.getElementById("tag");
-    const tel = document.getElementById("phone");
-    const loc = document.getElementById("locale");
-    const email = document.getElementById("email");
-    const ver = document.getElementById("verified");
-    const profile = document.querySelector("#profile");
-    const info = document.querySelector(".info")
-    const token = document.getElementsByClassName("label")[0].value;
+    let alerter = document.getElementById("alert-doe");
+    let list = document.getElementsByClassName("list-group")[0];
+    let id = document.getElementById("id");
+    let tag = document.getElementById("tag");
+    let tel = document.getElementById("phone");
+    let loc = document.getElementById("locale");
+    let email = document.getElementById("email");
+    let ver = document.getElementById("verified");
+    let profile = document.querySelector("#profile");
+    let info = document.querySelector(".info")
+    let token = document.getElementsByClassName("label")[0].value;
 
     alerter.style.display = "none";
     list.style.display = "none";
