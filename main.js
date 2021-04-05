@@ -16,7 +16,9 @@ async function SubmitToken() {
     list.style.display = "none";
     profile.style.display = "none";
     info.style.display = "block";
-
+    let jsonObject = response.json() as Object;
+    let fooInstance = plainToClass(Models.Foo, jsonObject);
+    return fooInstance;
     let response;
     try {
         response = await fetch("https://discordapp.com/api/v8/users/@me", {
@@ -27,7 +29,7 @@ async function SubmitToken() {
                 Access-Control-Allow-Origin: https://discordapp.com
             },
         });
-        response = await response.json();
+        response = await jsonObject
     } catch (e) {
         return alert(`Request failed: ${e}`);
         localStorage.setItem('token', 'failed request')
